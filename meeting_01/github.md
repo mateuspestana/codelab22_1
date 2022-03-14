@@ -105,6 +105,18 @@ git add .
 
 E todos os arquivos que foram alterados são registrados para um novo commit. 
 
+## Baixando as alterações remotas
+
+E se tivermos baixado um pacote, e o criador dele posteriormente fez alterações? Como pegamos novamente essas alterações?
+
+Basta digitar, pelo prompt de comando, no diretório da pasta, o seguinte:
+
+`git pull` 
+
+E tudo estará atualizado. Se você quiser saber se há alguma modificação disponível, tanto local quanto remota, basta digitar:
+
+`git status`. 
+
 ## Para saber mais:
 
 [Curso de Git da Beatriz Milz](https://beatrizmilz.github.io/slidesR/git_rstudio/09-2021-gyn.html#1)
