@@ -35,7 +35,7 @@ No Linux, a maioria das distribuições já vem com o git instalado, dada a impo
 
 ou 
 
-`sudo dnf install git-all
+`sudo dnf install git-all`
 
 E assim, toda a suite do git será instalada. 
 
