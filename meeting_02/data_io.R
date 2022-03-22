@@ -36,3 +36,11 @@ movielens <- vroom("https://media.githubusercontent.com/media/m-clark/noiris/mas
 install.packages("rio")
 library(rio)
 movie2 <- import("meeting_02/bases/movielens.fst")
+
+## Exportando
+
+# Todas as funções acima tem sua variação write ao invés de read. 
+# Logo, ao invés de read_csv podemos usar write_csv, ou write_csv2, 
+# ou write_xlsx (que pertence ao pacote writexl).
+# 
+# No caso do "rio", usamos ao invés de import, export(), definindo o caminho do arquivo.
