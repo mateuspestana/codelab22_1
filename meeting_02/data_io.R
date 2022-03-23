@@ -9,7 +9,7 @@
 # Dataframes podem ser abertos em CSV, XLSX, XLS, TSV, TXT, dentre outros. O R tem muitas funções para isso.
 
 ### Abrindo um arquivo CSV separado por ; 
-
+library(readr)
 cand_rj <- read_csv2("meeting_02/bases/votacao_candidato_munzona_2020_RJ.csv")
 
 ### Abrindo um CSV separado por , 
