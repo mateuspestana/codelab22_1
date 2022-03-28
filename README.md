@@ -6,20 +6,20 @@ Repositório do GitHub que contém todos os nossos dados de cada encontro, com b
 
 - 16/03: Introdução, apresentações e Github
 - 23/03: Revisão de R
-- 30/03: Raspagem de dados com R
-- 06/04: Raspagem de dados com Python
-- 13/04: Desafio
-- 20/04: Replicação de artigo de Sociologia
-- 27/04: Tratamento de textos
-- 04/05: Expressões regulares (RegEx)
-- 11/05: Desafio
-- 18/05: Replicação de artigo de Ciência Política
-- 25/05: A definir
-- 01/06: Desafio final e encerramento
+- 29/03: Raspagem de dados com R
+- 05/04: Raspagem de dados com Python
+- 12/04: Desafio
+- 19/04: Replicação de artigo de Sociologia
+- 26/04: Tratamento de textos
+- 03/05: Expressões regulares (RegEx)
+- 10/05: Desafio
+- 17/05: Replicação de artigo de Ciência Política
+- 24/05: A definir
+- 31/05: Desafio final e encerramento
 
 As sessões são gratuitas e abertas a todos os alunos, não requerendo inscrição alguma, estando limitado apenas pela lotação da sala. 
 
-Os encontros serão realizados toda quarta-feira, às 16h, na Sala de Pesquisa. 
+Os encontros serão realizados toda terça-feira, às 10h, na Sala Carlos Hasenbalg. 
 
 É pedido um conhecimento básico/mínimo de R para que haja melhor aproveitamento do conteúdo. Esse nível é facilmente obtido durante o nivelamento de Lego 1.
 
