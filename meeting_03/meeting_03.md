@@ -43,7 +43,7 @@ Exemplos de pacotes do R para acessar API
  - tuber: https://cran.r-project.org/web/packages/tuber/vignettes/tuber-ex.html
 
 
-### Noções básicas do rvest (olhar documentação!)
+### 1.1 Noções básicas do rvest (olhar documentação!)
 
 ## 2. Baixando dados do Wikipedia e outras tabelas simples
 
@@ -56,4 +56,6 @@ Exemplos de pacotes do R para acessar API
 [Summer Institue of Computational Social Science](https://www.youtube.com/playlist?list=PL9UNgBC7ODr4M1_4RLr4IYcXbHPUWYMrZ)
 
 [Texto como Dado para Ciências Sociais - Davi Moreira](https://bookdown.org/davi_moreira/txt4cs/)
+
+https://github.com/thiagomeireles/cebraplab_captura_2021
 
