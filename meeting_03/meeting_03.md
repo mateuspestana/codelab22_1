@@ -3,9 +3,9 @@
 
 ## 1. Raspagem de dados
 
-Rapagem de dados ou *web scrapping* significa acessar dados que estão disponíveis online, porém, que não são acessíveis de forma simplificada por meio de um download. São informações que podemos visualizar, mas que requerem uma forma mais direta de se obter. Nesse sentifo, estamos extraindo, raspando dados.
+Raspagem de dados ou *web scrapping* significa acessar dados que estão disponíveis online, porém, que não são acessíveis de forma simplificada por meio de um download. São informações que podemos visualizar, mas que requerem uma forma mais direta de se obter. Nesse sentido, estamos extraindo, raspando dados.
 
-Por exemplo, suponha que desejamos acompanhar a discusão política no Twitter durante o horário debate ao vivo em uma emissora de TV. Para isso, basta acessar a plataforma nesse horário e buscar por palavras chaves específicas, como "#DebateNaGlobo". Contudo, por mais que o pesquisador consiga visualizar todos os tweets, é mais interessante que esse reuní-los para uma análise mais atenta e criteriosa. Para isso, ele precisa extraí-los de alguma forma. Assim, diversos tipos de análise podem ser feitas e o pesquisador pode voltar neles quando desejar. 
+Por exemplo, suponha que desejamos acompanhar a discussão política no Twitter durante o horário debate ao vivo em uma emissora de TV. Para isso, basta acessar a plataforma nesse horário e buscar por palavras chaves específicas, como "#DebateNaGlobo". Contudo, por mais que o pesquisador consiga visualizar todos os tweets, é mais interessante que esse reuní-los para uma análise mais atenta e criteriosa. Para isso, ele precisa extraí-los de alguma forma. Assim, diversos tipos de análise podem ser feitas e o pesquisador pode voltar neles quando desejar. 
 
 Para isto fazemos a raspagem!
 Outro exemplo bem comum são tabelas disponíveis online, mas que não possuem uma versão para download, como as presentes em páginas da Wikipedia.
