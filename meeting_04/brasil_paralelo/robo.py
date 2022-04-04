@@ -1,5 +1,5 @@
 # Scraper do Brasil Paralelo
-# Autor: Matheus Pestana (matheus.pestana@iesp.uerj.br)
+# Autores: Matheus Pestana (matheus.pestana@iesp.uerj.br) e Luana Calzavara (luacalzava@iesp.uerj.br)
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
