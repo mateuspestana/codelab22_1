@@ -62,6 +62,7 @@ sessao <- info |>
   str_squish() 
 
 data_cpi <- sessao |> nth(1)
+
 # Como obter o ID da sessão?
 
 id_sessao <- str_extract(link_qualquer, "/r/\\d*") |> 
@@ -201,14 +202,11 @@ baixaNotas <- function(id, extensao = "xlsx") {
 baixaNotas(ids[7], "xlsx")
 
 # Baixando tudo com um FOR
-for(id in ids){
-  baixaNotas(id, "xlsx")
-}
+for(id in ids){baixaNotas(id, "xlsx")}
 
 # E se fosse um map?
 # Explicação do map
 map(ids, baixaNotas, "csv")
-
 
 notas <- list.files(".", pattern = ".csv", full.names = T)
 

@@ -1,6 +1,6 @@
 # Raspagem do wikipedia
 
-pacman::p_load(tidyverse, rvest, rio, janitor)
+pacman::p_load(tidyverse, rvest, rio, janitor, xml2)
 
 # Que página queremos raspar?
 # Prefeitos do Rio de Janeiro
@@ -12,8 +12,12 @@ prefeitos_tables <- pref_pagina |>
   html_elements("table.wikitable") |> 
   html_table() 
 
-names(prefeitos_tables) <- c("Período imperial", "Período Republicano (até 1960)",
-                             "Estado da Guanabara", "Período atual")
+periodos <- c("Período imperial", 
+              "Período Republicano (até 1960)",
+              "Estado da Guanabara", 
+              "Período atual")
+
+names(prefeitos_tables) <- periodos
 
 names(prefeitos_tables[[1]]) <- prefeitos_tables[[1]][1,]
 

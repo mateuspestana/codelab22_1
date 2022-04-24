@@ -19,3 +19,5 @@ episode <- films |>
 starwars |> 
   html_elements("div.crawl") |> 
   html_text2()
+
+
