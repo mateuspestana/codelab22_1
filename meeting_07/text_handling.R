@@ -130,9 +130,37 @@ plot(mod7, type = "summary")
 plot(mod7, type = "perspectives", topics = c(1, 7))
 plot(mod7, type = "perspectives", topics = c(1, 2))
 
-labelTopics(mod7, n = 10)
+labelTopics(mod7, n = 9)
 
 # Brasil Paralelo -------------------------------------------------------------------
 
-brapar <- import("meeting_04/brasil_paralelo/materias_bp.csv") |> 
-  corpus(text_field)
+brapar <- import("meeting_04/brasil_paralelo/materias_bp.csv", header = T) |>
+  janitor::clean_names() |> 
+  corpus(text_field = "materia") |> 
+  tokens(remove_punct = T, 
+         remove_symbols = T,
+         remove_numbers = T, 
+         remove_url = T,
+         remove_separators = T) |> 
+  tokens_remove(stops2) |> 
+  dfm()
+  
+brapar_stm <- brapar |> 
+quanteda::convert(to = "stm")
+
+textstat_frequency(brapar)
+
+besk_brapar <- searchK(brapar_stm$documents, brapar_stm$vocab, K = 5:20)
+
+plot(besk_brapar)
+
+mod5 <- stm(brapar_stm$documents, brapar_stm$vocab, K = 5, init.type = "Spectral")
+mod6 <- stm(brapar_stm$documents, brapar_stm$vocab, K = 6, init.type = "Spectral")
+
+labelTopics(mod5, n = 10)$frex |> 
+  as.data.frame() |> 
+  t()
+
+labelTopics(mod6, n = 10)$frex |> 
+  as.data.frame() |> 
+  t()
