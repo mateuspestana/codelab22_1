@@ -13,6 +13,7 @@ pacman::p_load(tidyverse,
                lexiconPT,
                quanteda.textstats,
                quanteda.textmodels,
+               quanteda.textplots,
                stm)
 
 remotes::install_github("sillasgonzaga/lexiconPT")
@@ -92,7 +93,9 @@ stops2 <- c(stopwords(language = "pt"),
             "quero", "vamos", "acho", "disse", "ainda", "falar", "assim", "fez", "sei", "fez", "dessa", "sabe", 
             "todas", "todos", "dr", "sendo", "falou", "desse", "quer", "dar", "vez", "faz", "onde", "saber",
             "diz", "r", "ver", "dra", "nesta", "neste", "mim", "desde", "quanto", "havia", "sido", "nessa", "feito",
-            "sempre", "disso", "dois")
+            "sempre", "disso", "dois", "alguns", "algum", "dra", "deve", "peço", "pedir", "ali", "olha", "pois", "toda",
+            "responder", "têm", "outro", "desta", "nada", "alguma", "outros", "nenhum", "nesse", "tudo", "dizer", 
+            "aí", "então")
 notas_tokens <- corpus |> 
   tokens(remove_punct = T, 
          remove_symbols = T,
@@ -106,4 +109,30 @@ notas_dfm <- notas_tokens |>
 
 textstat_frequency(notas_dfm)
 
-textstat_dist(notas_dfm)
+textplot_wordcloud(notas_dfm)
+
+# Topic Model
+
+notas_stm <- quanteda::convert(notas_dfm |> 
+                                 dfm_subset(sessao <= 10),
+                               to = "stm")
+
+bestK <- searchK(notas_stm$documents, 
+                 notas_stm$vocab, 
+                 K = 5:10)
+
+plot(bestK)
+
+mod7 <- stm(notas_stm$documents, notas_stm$vocab, K = 7, init.type = "Spectral")
+
+plot(mod7, type = "labels")
+plot(mod7, type = "summary")
+plot(mod7, type = "perspectives", topics = c(1, 7))
+plot(mod7, type = "perspectives", topics = c(1, 2))
+
+labelTopics(mod7, n = 10)
+
+# Brasil Paralelo -------------------------------------------------------------------
+
+brapar <- import("meeting_04/brasil_paralelo/materias_bp.csv") |> 
+  corpus(text_field)
